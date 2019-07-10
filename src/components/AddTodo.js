@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from 'react-bootstrap/Button';
 
 export class AddTodo extends Component {
 
@@ -20,19 +21,21 @@ render()
 {
 return (
     <form onSubmit={this.onSubmit} style={{display: 'flex'}}>
+
+        
         <input 
             type='text' 
             name='title' 
             placeholder='Add Todo...'
-            style={{flex: '10', padding: '20px'}}
+            style={{flex: '1', padding: '20px'}}
             value={this.state.title}
             onChange = {this.onChange}
+            size="lg"
             />
 
-            <input type="submit" value="Submit" 
-                    className="btn"
-                    style = {{flex: '1'}}
-            />
+<Button variant="primary" type="submit" size='lg'>
+    Submit           
+  </Button>
 
 </form>
 )
